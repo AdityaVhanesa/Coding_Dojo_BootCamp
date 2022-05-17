@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyBay</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <!-- Top Easy Bay Top Bar outer Container -->
+    <div class="outer-nav-box  flex-box">
+        <!-- Inner Top search bar  -->
+        <div class=" flex-box col-2 search-bar flex-center-item">
+            <!-- App Icon -->
+            <img src="images/leaf.png" alt="Green Leaf Icon" class="leaf-icon">
+
+            <!-- App Name -->
+            <div class="title">EasyBay</div>
+
+            <!-- Search Bar -->
+            <div class="search-area flex-box">
+                <div class="heading3">Search for anything</div>
+                <img src="images/search-dark.png" alt="search-icon" class="search-icon">
+            </div>
+
+            <!-- LogInInfo -->
+            <div class="heading2">Sign In</div>
+
+            <!-- Check Out -->
+            <img src="images/cart-dark.png" alt="Cart-Icon" class="cart-icon" onclick="cartEmptyAlert()">
+        </div>
+
+        <!-- Innert Bottom Menu Bar -->
+        <div class="flex-box col-1 menu-bar flex-center-item heading2">
+            <div>Aeonium</div>
+            <div>Andormischus</div>
+            <div>Agave</div>
+            <div>Aloe</div>
+            <div>Anacampseros</div>
+            <div>Aristable</div>
+            <div>More...</div>
+        </div>
+    </div>
+
+    <!-- Bottom EasyBay Bottom Outer Container -->
+    <div class="flex-box  outer-info-box">
+        <!-- Bottom Inner Row 1 -->
+        <div class="row1  col-1 heading flex-box">
+            Your Source for Serious Succulent Specialities
+        </div>
+
+        <!-- Bottom Inner Row 2 -->
+        <div class="row2 col-4 flex-box">
+            <!-- Left-Column -->
+            <div class="left-column flex-box col-3">
+                <div class="col-1 inner-left-column flex-box">
+                    <div class="col-2 flex-box flex-center-item  flex-center-content left-column-text">
+                        Discover Succulent varieties one pot or rack at a time!
+                    </div>
+                    <div class="col-1 flex-box flex-center-item left-column-text">
+                        <div>Discover</div>
+                        <img src="images/arrow-light.png" alt="Arrow image">
+                    </div>
+                </div>
+                <div class="col-1 succulents-img" onmouseover="changeImageToSucculents2(this)" onmouseout="changeImageToSucculents1(this)">
+                </div>
+            </div>
+
+
+            <!-- Right Column -->
+            <div class="col-2 flex-box right-column">
+                <div class="col-2 flex-box aloe-img">
+                </div>
+
+                <div class="col-1 flex-box flex-center-item soothing-aloe">
+                    <div class="heading-2">Soothing Aloe</div>
+                    <img src="images/arrow-light.png" alt="not-availabel">
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Inner Row 3 -->
+        <div class="row3 col-2 flex-box heading2">
+            <!-- Card1 -->
+            <div class="card col-1 flex-box ">
+                <img src="images/aeonium-s.jpg" alt="Not-available" class="card-img">
+                <div>Aeonium</div>
+            </div>
+
+            <!-- Card2 -->
+            <div class="card col-1 flex-box ">
+                <img src="images/aloe-s.jpg" alt="Not-available" class="card-img">
+                <div>Aloe</div>
+            </div>
+
+            <!-- Card3 -->
+            <div class="card col-1 flex-box ">
+                <img src="images/cactus-s.jpg" alt="Not-available" class="card-img">
+                <div>Cactus</div>
+            </div>
+
+            <!-- Card4 -->
+            <div class="card col-1 flex-box ">
+                <img src="images/echeveria-s.jpg" alt="Not-available" class="card-img">
+                <div>Echeveria</div>
+            </div>
+
+            <!-- Card5 -->
+            <div class="card col-1 flex-box ">
+                <img src="images/sedum-s.jpg" alt="Not-available" class="card-img">
+                <div>Sedum</div>
+            </div>
+
+            <!-- Card1 -->
+            <div class="card col-1 flex-box">
+                <img src="images/sempervivum-s.jpg" alt="Not-available" class="card-img">
+                <div>Sempervivum</div>
+            </div>
+
+        </div>
+
+        <!-- Cookies Alert -->
+        <div class="div-alert">
+            <!-- Cooke Icon -->
+            <div class="icon">
+                <img src="images/alert-dark.png" alt="No Image">
+            </div>
+            <!-- Cookie Text -->
+            <div class="div-cookie-text">
+                <div class="cookie-text">
+                    This site makes use of third-party cookies, by cliking "I accept"
+                    you aggree to the terms outlined in our <span>cookie policy</span>
+                </div>
+            </div>
+            <!-- Acknoledge Button -->
+            <div class="acknowledge-btn">
+                <button class="btn" onclick="acceptCookies()">I accept</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

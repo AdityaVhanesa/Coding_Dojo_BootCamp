@@ -1,0 +1,291 @@
+/*** The new CSS Reset - version 1.2.0 (last updated 23.7.2021) ***/
+/* Remove all the styles of the 'User-Agent-Stylesheet', except for the 'display' property */
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+all: unset;
+display: revert;
+}
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+box-sizing: border-box;
+padding: 0;
+margin: 0;
+}
+body {
+min-height: 100vh;
+display: flex;
+align-items: center;
+justify-content: flex-start;
+flex-direction: column;
+/* text-rendering: optimizeSpeed;
+line-height: 1.5; */
+}
+/*
+Remove list styles (bullets/numbers)
+in case you use it with normalize.css
+*/
+ol, ul {
+list-style: none;
+}
+/* For images to not be able to exceed their container */
+img {
+max-width: 100%;
+}
+/* Removes spacing between cells in tables */
+table {
+border-collapse: collapse;
+}
+/* Revert the 'white-space' property for textarea elements on Safari */
+textarea {
+white-space: revert;
+}
+
+.center-item {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.column {
+    flex-direction:column;
+}
+
+
+.col-1 {
+    flex: 1;
+}
+
+.col-2 {
+    flex: 2;
+}
+
+.col-3 {
+    flex: 3;
+}
+
+.col-4 {
+    flex: 4;
+}
+
+.col-5 {
+    flex: 5;
+
+}
+
+
+.title {
+    font-size: 3em;
+    font-weight: bold;
+    color: black;
+}
+
+.heading {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: black;
+}
+
+.heading2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: black;
+}
+
+
+.test-border {
+    border: 5px solid red;
+}
+
+
+.flex-box {
+    display: flex;
+}
+
+.flex-around-center {
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flex-center-item {
+    align-items: center;
+}
+
+.flex-center-content{
+    justify-content: center;
+}
+
+.outer-nav-box {
+    width: 80vw;
+    height: 15vh;
+    border-bottom: 5px solid black;
+    flex-direction: column;
+}
+.search-bar {
+    width: 100%;
+    justify-content: space-between;
+
+}
+.menu-bar {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.leaf-icon{
+    background-color: #00c3a9;
+    border-radius: 2px ;
+}
+
+.search-area {
+    width: 60%;
+    height: 3em;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 2px solid black;
+    border-radius: 30px;
+}
+
+.search-icon {
+    width: 1em;
+    height: 1em;
+}
+
+.cart-icon:hover {
+    cursor: pointer;
+}
+
+.outer-info-box{
+    height: 85vh;
+    width: 80vw;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.row1 {
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+}
+
+.row2 {
+    height: 40vh;
+    gap: 2vh;
+}
+
+.row2 .left-column .inner-left-column {
+    background-color: #00c3a9;
+    flex-direction: column;
+    color: white;
+    font-weight: normal;
+    font-size: 2em;
+}
+
+.row2 .left-column .left-column-text {
+    padding-left: 5vh;
+    padding-right: 5vh;
+}
+
+.succulents-img{
+    background-image: url("images/succulents-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.aloe-img {
+    background-image: url("images/aloe-m.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.row2 .right-column {
+    flex-direction: column;
+    color: white;
+    font-size: 2em;
+    gap: 2vh;
+}
+
+.soothing-aloe {
+    background-color: #00c3a9;
+    padding-left: 5vw;
+    justify-content: flex-start;
+}
+
+
+.row3 {
+    background-color: #c7fafa;
+}
+
+.row3 .card {
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+
+}
+
+.card-img {
+    height: 5em;
+    width: 5em;
+    border-radius: 50%;
+}
+
+.div-alert {
+    position: fixed;
+    height: 15vh;
+    width: 80vw;
+    border: 5px solid black;
+    margin-bottom: 1vh;
+    bottom: 0;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.icon{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+.div-cookie-text {
+    flex: 3;
+}
+
+.acknowledge-btn {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+.heading {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.cookie-text{
+
+    display: flex;
+    flex-wrap: wrap;
+    text-align: justify;
+    font-size: 1em;
+}
+
+.btn {
+    background-color: #00c3a9;
+    border: 2px solid black;
+    font-size: 1.5em;
+    width: 20vh;
+    display: flex;
+    justify-content: center;
+    box-shadow: 5px 5px 0px 0px black;
+}
+
+.div-alert span{
+    color: blue;
+    text-decoration:underline;
+}
+
+.div-alert span:hover {
+    cursor: pointer;
+}
