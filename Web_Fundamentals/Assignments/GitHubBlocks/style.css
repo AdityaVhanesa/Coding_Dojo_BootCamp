@@ -1,0 +1,34 @@
+h1 {
+    color: teal;
+    text-align: center;
+    font-size: 5vh;
+}
+
+#Row1 {
+    border: 2px solid black;
+    background-color: beige;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#Row2 {
+    border: 2px solid black;
+    background-color: azure;
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#Row3 {
+    border: 2px solid black;
+    background-color:bisque;
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-around;
+}
+img {
+    height: 250px;
+    width: 250px;
+    padding: 20px;
+}

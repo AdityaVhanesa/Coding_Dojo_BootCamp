@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <!-- Top Navigation Bar -->
+    <div class="nav">
+        <h1 class="nav-title">Profile</h1>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#" class="active">My Profile</a></li>
+            <li><a href="#">Find Connections</a></li>
+            <li><button class="btn">Sign Out</button></li>
+        </ul>
+    </div>  
+
+
+
+    <!-- Main Container -->
+    <div class="main-container">
+
+
+        <!-- Main Information Column 1 -->
+        <div class="user-column-1 user-column">
+
+
+            <!-- User Main Information Tile. -->
+            <div class="user-container">
+                <div class="user-top-container">
+                    <img class="user-image" src="icons/user-circle.png" alt="Not Available">
+                </div>
+                <div class="user-bottom-container">
+                    <h1 class="user-name">Jane Doe</h1>
+                    <div class="user-icon-div">
+                        <img class="user-icon" src="icons/map-marker.png" alt="Not Available">
+                        <h2 class="user-location-text">Seattle</h2>
+                    </div>
+                    <h4 class="user-information">Developer | Engineer | Problem Sovler <br> Masters of Shadows and the Internet!</h4>
+                    <div class="user-icon-div">
+                        <img class="user-icon" src="icons/gear.png" alt="Not Available">
+                        <a class="user-profile-setting" onclick="changeProfile()"> Edit Profile</a>
+                    </div>
+                </div>
+            
+            
+            
+            
+            </div>
+
+            <!-- Education Tile -->
+            <div class="user-education-container">
+                <div class="user-education-top-container">
+                    <div class="education-text">Education</div>
+                </div>
+                <div class="user-education-bottom-container">
+                    
+                    <div class="user-degree-container">
+                        <div class="user-degree">
+                            <div class="user-degree-name">Coding Dojo - Full Stack Bootcamp</div>
+                            <div class="user-degree-year">Current</div>
+                        </div>
+                        <div class="user-university"></div>
+                    </div>
+
+
+                    <div class="user-degree-container">
+                        <div class="user-degree">
+                            <div class="user-degree-name">Master of Science in Electrical and Computer Engineering</div>
+                            <div class="user-degree-year">December - 2020</div>
+                        </div>
+                        <div class="user-university">University of Illinoins at Chicago [Chicago, IL]</div>
+                    </div>
+
+
+                    <div class="user-degree-container">
+                        <div class="user-degree">
+                            <div class="user-degree-name">Bachelore of Engineering in Electrical Engineering</div>
+                            <div class="user-degree-year">June - 2019</div>
+                        </div>
+                        <div class="user-university">Gujarat Technological University [Gandhinagar, India]</div>
+                    </div>
+                    
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <!-- Side Information Column 2 -->
+        <div class="user-column-2 user-column">
+
+            <!-- Connections Requests Tile -->
+            <div class="side-container">
+                <div class="side-top-container">
+                    <div class="request-number education-text">2</div>
+                    <div class="education-text">Connection Requests</div>
+                </div>
+                <div class="side-bottom-container">
+                    <div class="connection-container">
+                        <img src="images/phil-s.jpg" alt="Not Available" class="connection-image">
+                        <div class="connection-name">Phil-K</div>
+                        <div class="connection-response">
+                            <img src="icons/accept-circle.png" alt="Not Available" class="icon" onclick="declineRequest('Phil-K')">
+                            <img src="icons/close-circle.png" alt="Not Available" class="icon"  onclick="declineRequest('Phil-K')">
+                        </div>
+                    </div>
+                    
+                    <div class="connection-container">
+                        <img src="images/todd-s.jpg" alt="Not Available" class="connection-image">
+                        <div class="connection-name">Todd E</div>
+                        <div class="connection-response">
+                            <img src="icons/accept-circle.png" alt="Not Available" class="icon" onclick="declineRequest('Todd E')">
+                            <img src="icons/close-circle.png" alt="Not Available" class="icon" onclick="declineRequest('Todd E')">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Connections Information Tile -->
+            <div class="side-container">
+                <div class="side-top-container">
+                    <div class="connection-number education-text">500+</div>
+                    <div class="education-text">Your Connections</div>
+                </div>
+                <div class="side-bottom-container">
+                        <div class="connection-container">
+                            <img src="images/adrien-s.jpg" alt="Not Available" class="connection-image">
+                            <div class="connection-name">Adrien D</div>
+                        </div>
+
+                        <div class="connection-container">
+                            <img src="images/anne-s.jpg" alt="Not Available" class="connection-image">
+                            <div class="connection-name">Anne J</div>
+                        </div>
+
+                        <div class="connection-container">
+                            <img src="images/alayne-s.jpg" alt="Not Available" class="connection-image">
+                            <div class="connection-name">Alayne T </div>
+                        </div>
+
+                        <div class="connection-container">
+                            <img src="images/arry-s.jpg" alt="Not Available" class="connection-image">
+                            <div class="connection-name">Arrt Y</div>
+                        </div>
+                </div>
+
+
+                <div class="side-container-footer">
+                    <a href="http://google.com">View More</a>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
