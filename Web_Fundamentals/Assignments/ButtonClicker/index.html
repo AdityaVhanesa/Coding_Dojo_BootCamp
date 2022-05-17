@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Clicker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Top Most outer container to place every thing in middle of page -->
+    <div id="outer-container">
+        <!-- Top Navigation Container -->
+        <div id="nav">
+            <div class="heading">Dojonary</div>
+            <div class="search-bar">
+                <div class="heading2">Search</div>
+            </div>
+            <button class="btn btn-shadow btn-border" onclick="logInButton(this)">Log In</button>
+        </div>
+        <!-- Bottom Information Container -->
+        <div id="information">
+            <!-- Left Column -->
+            <div class="col-2 flex-box info-column">
+                <!-- Left Column Tile 1 -->
+                <div class = "tile flex-box">
+                    <!-- Tile 1 Left Side -->
+                    <div class="col-1 flex-box tile-info">
+                        <div class="heading">ninja</div>
+                        <div class="heading2">noun</div>
+                        <div class="heading2">Plural: ninjas</div>
+                        <button class="btn-2 btn-shadow btn-border" onclick="likeButton(this)">0 Likes</button>
+                    </div>
+                    <!-- Tile 1 Right Side -->
+                    <div class="col-2 flex-box tile-defination">
+                        <div class="heading3">
+                            A practitioner skilled in the Japanese art of ninjutsu
+                        </div>
+                    </div>
+                </div>
+                <!-- Left Column Tile 2  -->
+                <div class="tile flex-box">
+                    <!-- Tile 2 Left Side  -->
+                    <div class="col-1 flex-box tile-info">
+                        <div class="heading">ninja</div>
+                        <div class="heading2">noun</div>
+                        <div class="heading2">Plural: ninjas</div>
+                        <button class="btn-2 btn-shadow btn-border" onclick="likeButton(this)">0 Likes</button>
+                    </div>
+                    <!-- Tile 2 Right Side -->
+                    <div class="col-2 flex-box tile-defination">
+                        <div class="heading3">A programmer who breaks down problem like zen-like focus</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="col-1 flex-box info-column">
+                <!-- Right Column Tile 1 -->
+                <div class="tile flex-box tile-right-defination">
+                    <div class="heading text">Dojonary is defined by YOU</div>
+                    <button class="btn-3 btn-shadow btn-border" onclick="definationButton(this)"> Add Defination</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+/*** The new CSS Reset - version 1.2.0 (last updated 23.7.2021) ***/
+/* Remove all the styles of the 'User-Agent-Stylesheet', except for the 'display' property */
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+all: unset;
+display: revert;
+}
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+box-sizing: border-box;
+padding: 0;
+margin: 0;
+}
+body {
+min-height: 100vh;
+display: flex;
+align-items: center;
+justify-content: flex-start;
+flex-direction: column;
+/* text-rendering: optimizeSpeed;
+line-height: 1.5; */
+}
+/*
+Remove list styles (bullets/numbers)
+in case you use it with normalize.css
+*/
+ol, ul {
+list-style: none;
+}
+/* For images to not be able to exceed their container */
+img {
+max-width: 100%;
+}
+/* Removes spacing between cells in tables */
+table {
+border-collapse: collapse;
+}
+/* Revert the 'white-space' property for textarea elements on Safari */
+textarea {
+white-space: revert;
+}
+
+.top-nav-outer-container {
+    height: 10vh;
+    background-color: lightblue;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner-container {
+    width: 80vw;
+    height: 10vh;
+    display: flex;
+}
+
+.app-name {
+    font-size: 4em;
+    color: white;
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-weight: bold;
+}
+
+.city-names {
+    color: white;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 2em;
+}
+
+.bottom-main-container{
+    margin-top: 2vh;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.bottom-top-row {
+    width: 80vw;
+    height: 12vh;
+    display: flex;
+    border-bottom: 5px solid black;
+}
+
+.city-name {
+    flex: 1;
+    font-size: 3em;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.selection-parameter {
+    flex: 1;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.selection-text {
+    padding-right: 3em;
+}
+
+#temp-parameter {
+    border: 2px solid gray;
+    border-radius: 5px;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.bottom-last-row {
+    margin-top: 2vh;
+    width: 80vw;
+    height: 55vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card {
+    width: 22%;
+    height: inherit;
+    border: 5px solid black;
+    background-color: rgb(228, 227, 227);
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.day {
+    margin-top: 1vh;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.img {
+    width: 20vh;
+    height: 20vh;
+    border-radius: 50%;
+}
+
+.weather-memo {
+    font-size: 1.5em;
+}
+
+.temp-row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.max-temp {
+    font-size: 3em;
+    color: red;
+}
+
+.min-temp {
+    font-size: 3em;
+    color: blue;
+}
+.div-alert {
+    position: fixed;
+    height: 15vh;
+    width: 80vw;
+    border: 5px solid black;
+    margin-bottom: 1vh;
+    bottom: 0;
+    background-color: rgb(167, 167, 167);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.icon{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+.div-cookie-text {
+    flex: 3;
+}
+
+.acknowledge-btn {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+.heading {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.cookie-text{
+
+    display: flex;
+    flex-wrap: wrap;
+    text-align: justify;
+    font-size: 1.5em;
+}
+
+.btn {
+    background-color: lightblue;
+    border: 2px solid black;
+    font-size: 1.5em;
+    width: 10vh;
+    display: flex;
+    justify-content: center;
+    box-shadow: 5px 5px 0px 0px black;
+}
+
+.city-names div:hover {
+    cursor: pointer;
+}

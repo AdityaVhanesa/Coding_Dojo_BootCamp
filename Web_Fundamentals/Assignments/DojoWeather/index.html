@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Weather</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <!-- Top Navigation Bar  -->
+    <div class="top-nav-outer-container">
+        <!-- Inner Container -->
+        <div class="inner-container">
+            <!-- Application Title -->
+            <div class="app-name">DojoWeather</div>
+            <!-- City Names. -->
+            <div class="city-names">
+                <div onclick="changeCity('BurBank')">BurBank</div>
+                <div onclick="changeCity('Chicago')">Chicago</div>
+                <div onclick="changeCity('Dallas')">Dallas</div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Bottom Main Contaianer -->
+    <div class="bottom-main-container">
+        <!-- Bottom Top Row -->
+        <div class="bottom-top-row">
+            <!-- Selected City name -->
+            <div class="city-name">San Jose</div>
+            <!-- Selection Parameter  -->
+            <div class="selection-parameter">
+                <div class="selection-text">show temperature in</div>
+                <select name="temp-parameter" id="temp-parameter" onchange="changeTempParameter(this)">
+                    <option value="celcius">Celcius</option>
+                    <option value="fahrenheit">Fahrenheit</option>
+                </select>
+            </div>
+
+        </div>
+        <!-- Bottom Last Row -->
+        <div class="bottom-last-row">
+            <!-- Card1 -->
+            <div class="card">
+                <div class="day">Today</div>
+                <img src="assets/some_rain.png" alt="Not Available" class="img">
+                <div class="weather-memo">Some Rain</div>
+                <div class="temp-row">
+                    <div class="max-temp">24</div>
+                    <div class="min-temp">18</div>
+                </div>
+
+            </div>
+            <!-- Card2 -->
+            <div class="card">
+                <div class="day">Tomorrow</div>
+                <img src="assets/some_sun.png" alt="Not Available" class="img">
+                <div class="weather-memo">Some Sun</div>
+                <div class="temp-row">
+                    <div class="max-temp">26</div>
+                    <div class="min-temp">21</div>
+                </div>
+            </div>
+
+            <!-- Card3 -->
+            <div class="card">
+                <div class="day">Friday</div>
+                <img src="assets/some_clouds.png" alt="Not Available" class="img">
+                <div class="weather-memo">Some Clouds</div>
+                <div class="temp-row">
+                    <div class="max-temp">21</div>
+                    <div class="min-temp">16</div>
+                </div>
+            </div>
+
+            <!-- Card4 -->
+            <div class="card">
+                <div class="day">Saturday</div>
+                <img src="assets/some_sun.png" alt="Not Available" class="img">
+                <div class="weather-memo">Some Clouds</div>
+                <div class="temp-row">
+                    <div class="max-temp">27</div>
+                    <div class="min-temp">19</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- Cookies Alert -->
+    <div class="div-alert">
+        <!-- Cooke Icon -->
+        <div class="icon">
+            <img src="assets/cookie.png" alt="No Image">
+        </div>
+        <!-- Cookie Text -->
+        <div class="div-cookie-text">
+            <div class="heading">Stop! Cookie Time</div>
+            <div class="cookie-text">We use cookies to personalize content and ads, to provide social media fetures and to analyze the traffic.</div>
+        </div>
+        <!-- Acknoledge Button -->
+        <div class="acknowledge-btn">
+            <button class="btn" onclick="acceptCookies()">I accept</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
