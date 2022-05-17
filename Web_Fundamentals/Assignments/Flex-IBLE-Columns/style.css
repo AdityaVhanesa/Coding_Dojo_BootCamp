@@ -1,0 +1,24 @@
+.row {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.col, .col-2, .col-3 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    background-color: lightseagreen;
+    border: 2px solid black;
+    flex: 1;
+}
+
+.col-2 {
+    flex: 2;
+}
+
+.col-3 {
+    flex: 3;
+}
