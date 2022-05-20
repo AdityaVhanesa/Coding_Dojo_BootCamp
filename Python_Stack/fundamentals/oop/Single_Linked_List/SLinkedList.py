@@ -2,6 +2,10 @@ from node import Node
 import time
 
 
+"""
+Single Linked List --> Each entry is node and node contains pointer to the next node.
+This is very useful to navigate effectively in the list.
+"""
 class SList:
     def __init__(self):
         self.head = None
