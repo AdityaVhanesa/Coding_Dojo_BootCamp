@@ -1,0 +1,114 @@
+USE books_schema;
+SELECT * FROM books;
+
+UPDATE books
+SET title = 'C#'
+WHERE id = 1;
+
+
+
+-- change the first name of 4th auther to bill
+UPDATE authors
+SET name = 'Bill'
+WHERE id = 4;
+
+
+
+
+-- Have the first author favorite the first 2 books
+INSERT INTO books_has_authors ( author_id, book_id )
+VALUES (1, 1);
+
+INSERT INTO books_has_authors ( author_id, book_id )
+VALUES (1, 2);
+
+
+
+
+-- Have the second author favorite the first 3 books
+INSERT INTO books_has_authors ( author_id, book_id )
+VALUES (2, 1);
+
+INSERT INTO books_has_authors ( author_id, book_id )
+VALUES (2, 2);
+
+INSERT INTO books_has_authors ( author_id, book_id )
+VALUES (2, 3);
+
+
+
+
+-- Have the third author favorite the first 4 books
+INSERT INTO books_has_authors ( author_id, book_id )
+VALUES (3, 1);
+
+INSERT INTO books_has_authors ( author_id, book_id )
+VALUES (3, 2);
+
+INSERT INTO books_has_authors ( author_id, book_id )
+VALUES (3, 3);
+
+INSERT INTO books_has_authors ( author_id, book_id )
+VALUES (3, 4);
+
+
+
+
+-- Have the third author favorite the first 5 books
+INSERT INTO books_has_authors ( author_id, book_id )
+VALUES (4, 1);
+
+INSERT INTO books_has_authors ( author_id, book_id )
+VALUES (4, 2);
+
+INSERT INTO books_has_authors ( author_id, book_id )
+VALUES (4, 3);
+
+INSERT INTO books_has_authors ( author_id, book_id )
+VALUES (4, 4);
+
+INSERT INTO books_has_authors ( author_id, book_id )
+VALUES (4, 5);
+
+
+
+
+-- SELECT authors that favorite the third book
+SELECT authors.name, books_has_authors.author_id
+FROM books_has_authors
+JOIN books ON books_has_authors.book_id = books.id
+JOIN authors ON books_has_authors.author_id = authors.id
+WHERE books.id = 3;
+
+
+
+
+-- REMOVE the first author of the third book favroutie
+DELETE FROM books_has_authors
+WHERE ( author_id = 2 
+                    
+		AND book_id = 3);
+
+
+INSERT INTO books_has_authors ( author_id, book_id )
+VALUES (5, 2);
+
+
+
+-- SELECT authors that favorite the third book
+SELECT authors.name, books_has_authors.author_id
+FROM books_has_authors
+JOIN books ON books_has_authors.book_id = books.id
+JOIN authors ON books_has_authors.author_id = authors.id
+WHERE books.id = 3;
+
+
+
+
+-- SELECT authors that favorite the fifth book
+SELECT authors.name, books_has_authors.author_id
+FROM books_has_authors
+JOIN books ON books_has_authors.book_id = books.id
+JOIN authors ON books_has_authors.author_id = authors.id
+WHERE books.id = 5;
+
