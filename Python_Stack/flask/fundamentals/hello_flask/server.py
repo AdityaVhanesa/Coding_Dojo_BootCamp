@@ -23,6 +23,12 @@ def hello(name):
     return "Hello, " + name
 
 
+@hello_flask.errorhandler(404)
+def handle_404(e):
+    # handle all other routes here
+    return 'Sorry No Response, Try Again..!'
+
+
 if __name__ == "__main__":  # Ensure this file is being run directly and not from a different module
     print("HI")
     hello_flask.run(debug=True)  # Run the app in debug mode.
