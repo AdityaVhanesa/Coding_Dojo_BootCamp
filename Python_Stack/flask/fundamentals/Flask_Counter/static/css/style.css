@@ -1,0 +1,102 @@
+/*** The new CSS Reset - version 1.2.0 (last updated 23.7.2021) ***/
+/* Remove all the styles of the 'User-Agent-Stylesheet', except for the 'display' property */
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+all: unset;
+display: revert;
+}
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+box-sizing: border-box;
+padding: 0;
+margin: 0;
+}
+body {
+min-height: 100vh;
+/* text-rendering: optimizeSpeed;
+line-height: 1.5; */
+}
+/*
+Remove list styles (bullets/numbers)
+in case you use it with normalize.css
+*/
+ol, ul {
+list-style: none;
+}
+/* For images to not be able to exceed their container */
+img {
+max-width: 100%;
+}
+/* Removes spacing between cells in tables */
+table {
+border-collapse: collapse;
+}
+/* Revert the 'white-space' property for textarea elements on Safari */
+textarea {
+white-space: revert;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f1de;
+}
+
+
+.heading {
+    font-family: Futura, Arial, serif;
+    font-weight: 100;
+    font-size: 5em;
+    color: #3d405b;
+}
+
+.counter_number {
+    font-family: Futura, Arial, serif;
+    font-weight: 300;
+    font-size: 20em;
+    color: #f2cc8f;
+}
+
+.counter_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #81b29a;
+    width: 25vw;
+    height: 45vh;
+    border: 5px solid #3d405b;
+    border-radius: 25px;
+    box-shadow: 5px 5px 5px 0 #3d405b;
+}
+
+.outer_button_box {
+    display: flex;
+    justify-content: space-between;
+    width: 25vw;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    width: 10vw;
+    margin-top: 5vh;
+    font-size: 3em;
+    background-color: #00b4d8;
+    border: 5px solid #3d405b;
+    cursor: pointer;
+
+}
+
+.btn:hover {
+    box-shadow: 5px 5px 5px 0 #3d405b;
+}
+
+

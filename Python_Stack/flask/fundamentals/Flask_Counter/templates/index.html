@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask Counter</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<div class="heading">Counter</div>
+
+<div class="counter_box">
+    <div class="counter_number"> {{ session['visit'] }}</div>
+</div>
+
+<div class="outer_button_box">
+    <a href="/"><div class="btn btn_1">Click </div></a>
+    <a href="/destroy_session"><div class="btn btn_2">Reset</div></a>
+</div>
+
+</body>
+</html>
