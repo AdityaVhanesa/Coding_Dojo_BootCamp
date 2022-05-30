@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dojo_Survey Form</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<div class="survey_outer_div">
+
+    <form action='{{ url_for('process_form') }}' method="post">
+        <div>
+            <label>
+                <input type="text" name="s_name" placeholder="Your Name" class="s_input">
+            </label>
+        </div>
+
+        <div>
+            <label>
+                <select name="s_dojo_location" class="s_input">
+                    <option value="place_holder">Dojo Location</option>
+                    <option value="san_jose">San Jose</option>
+                    <option value="chicago">Chicago</option>
+                    <option value="new_york">New York</option>
+                    <option value="seattle">Seattle</option>
+                </select>
+            </label>
+        </div>
+{##}
+{#        <div>#}
+{#            <label>#}
+{#                <select name="s_fav_language" class="s_input">#}
+{#                    <option value="place_holder">Favorite Language</option>#}
+{#                    <option value="python">Python</option>#}
+{#                    <option value="java">Java</option>#}
+{#                    <option value="c">C</option>#}
+{#                    <option value="html">HTML</option>#}
+{#                    <option value="js">Java Script</option>#}
+{#                    <option value="ruby">Ruby</option>#}
+{#                </select>#}
+{#            </label>#}
+{#        </div>#}
+{##}
+{#        <div>#}
+{#            <label>#}
+{#                <textarea name="s_comment"  cols="30" rows="10" placeholder="Comment [ Optional ]" class="s_input"></textarea>#}
+{#            </label>#}
+{#        </div>#}
+
+    </form>
+
+
+    <a href="/process"><div class="submit_button">SUBMIT</div></a>
+
+
+</div>
+</body>
+</html>
