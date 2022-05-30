@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dojo_Survey Form</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<div class="survey_outer_div result_outer_div">
+    <div class="result_text"> Submitted Info </div>
+    <div class="info_row_outer_div">
+        <div class="info_row_inner_div bold_text">Name:</div>
+        <div class="info_row_inner_div">{{ request.session.s_name }}</div>
+    </div>
+
+    <div class="info_row_outer_div">
+        <div class="info_row_inner_div bold_text">Dojo Location:</div>
+        <div class="info_row_inner_div">{{ request.session.s_dojo_location }}</div>
+    </div>
+
+    <div class="info_row_outer_div">
+        <div class="info_row_inner_div bold_text">Favorite Language:</div>
+        <div class="info_row_inner_div">{{ request.session.s_fav_language }}</div>
+    </div>
+
+    <div class="info_row_outer_div">
+        <div class="info_row_inner_div bold_text">Comment:</div>
+        <div class="info_row_inner_div">{{ request.session.s_comment }}</div>
+    </div>
+
+    <a href="/"><div class="submit_button">BACK</div></a>
+
+</div>
+</body>
+</html>
