@@ -9,18 +9,15 @@ def hello_survey():  # put application's code here
     return render_template('index.html')
 
 
-@app.route('/process', methods=['post', 'get'])
+@app.route('/process', methods=['post'])
 def process_form():
     print(request.method)
-    print(request.args)
-    # session['name'] = request.form['s_name']
-    # session['dojo_location'] = request.form['s_dojo_location']
-    # session['language'] = request.form['s_fav_language']
-    # session['comment'] = request.form['s_comment']
+    print(request.form)
+    session['name'] = request.form['s_name']
+    session['dojo_location'] = request.form['s_dojo_location']
+    session['language'] = request.form['s_fav_language']
+    session['comment'] = request.form['s_comment']
     return redirect('/result')
-
-
-
 
 
 @app.route('/result')

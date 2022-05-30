@@ -114,3 +114,7 @@ textarea {
 .bold_text {
     font-weight: bold;
 }
+
+.commnet {
+    min-height: 30%;
+}
