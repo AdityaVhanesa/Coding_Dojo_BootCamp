@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checker Board</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <style>
+        .color-1 {
+            background-color: {{ color_1 }};
+        }
+
+        .color-2 {
+            background-color: {{ color_2 }};
+        }
+    </style>
+</head>
+<body>
+
+
+{% set ns = namespace(shift=False) %}
+{% set cs = namespace(color=None) %}
+
+{% for _ in range( row ) %}
+    <div class="checker-row">
+        {% for _ in range( coloumn ) %}
+
+            {% if ns.shift %}
+                {% set cs.color = 'color-1' %}
+            {% else %}
+                {% set cs.color = 'color-2' %}
+            {% endif %}
+
+            <div class="checker-box {{ cs.color }}" ></div>
+
+            {% if ns.shift %}
+                {% set ns.shift = False %}
+            {% else %}
+                {% set ns.shift = True %}
+            {% endif %}
+
+        {% endfor %}
+
+    </div>
+
+    {% if ns.shift %}
+        {% set ns.shift = False %}
+    {% else %}
+        {% set ns.shift = True %}
+    {% endif %}
+
+
+{% endfor %}
+
+
+</body>
+</html>
