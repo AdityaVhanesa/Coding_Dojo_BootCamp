@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gold Ninja</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+
+</head>
+<body>
+
+<div class="gold-count-outer-div">
+    <div class="heading"> Your Gold: </div>
+    <div>
+        <div class="heading border-box"> {{ session['score'] }} </div>
+    </div>
+</div>
+
+<div class="outer-game-div">
+
+    <div class="game-card">
+        <div class="heading2">Farm</div>
+        <div>(Earns 10 - 20 Golds ) </div>
+        <form action="/process"  method="post">
+            <input type="hidden" name="location" value="farm">
+            <label>
+                <input type="submit" value="Find Gold !" class="form-submit">
+            </label>
+        </form>
+    </div>
+
+    <div class="game-card">
+        <div class="heading2">Cave</div>
+        <div>(Earns 5 - 10 Golds ) </div>
+        <form action="/process"  method="post">
+            <input type="hidden" name="location" value="cave">
+            <label>
+                <input type="submit" value="Find Gold !" class="form-submit">
+            </label>
+        </form>
+    </div>
+
+    <div class="game-card">
+        <div class="heading2">House</div>
+        <div>(Earns 2 - 5 Golds ) </div>
+        <form action="/process"  method="post">
+            <input type="hidden" name="location" value="house">
+            <label>
+                <input type="submit" value="Find Gold !" class="form-submit">
+            </label>
+        </form>
+    </div>
+
+    <div class="game-card">
+        <div class="heading2">Casino</div>
+        <div>(Earns/Takes 0 - 50 Golds ) </div>
+        <form action="/process"  method="post">
+            <input type="hidden" name="location" value="casino">
+            <label>
+                <input type="submit" value="Find Gold !" class="form-submit">
+            </label>
+        </form>
+    </div>
+</div>
+
+<div class="activity-outer-box">
+    <div class="heading3"> Activities: </div>
+
+    <div class="activity-inner-box "> 
+        {% for _, value in session['logs'].items() %}
+            <div class="{{ value[-1] }}">{{ value[0] }}</div>
+        {% endfor %}
+    </div>
+</div>
+
+</body>
+</html>
