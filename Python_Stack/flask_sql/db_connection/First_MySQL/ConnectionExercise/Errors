@@ -1,0 +1,13 @@
+SELECT * FROM friends;
+Select & From Friend;
+INSERT  INTO  friends(first_name, last_name) values('Zeal', 'Parmar');
+SELECT * FROM friends;
+INSERT INTO friends(first_name, last_name) values('Kevin', 'Yamada');
+SELECT last_name FROM friends WHERE id = 3;
+SELECT last_name as LN from friends where id = 2;
+UPDATE friends set last_name = 'Vhanesa' where id = 3;
+SELECT  * FROM friends where id = 3;
+SELECT * FROM friends WHERE last_name = 'Vhanesa';
+SELECT * FROM friends
+        WHERE last_name = 'Vhanesa';
+SELECT * FROM friends WHERE  last_name = 'Vhanesa' ORDER BY updated_at DESC ;
