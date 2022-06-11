@@ -1,0 +1,132 @@
+/*** The new CSS Reset - version 1.2.0 (last updated 23.7.2021) ***/
+/* Remove all the styles of the 'User-Agent-Stylesheet', except for the 'display' property */
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+    all: unset;
+    display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    /* text-rendering: optimizeSpeed;
+    line-height: 1.5; */
+}
+
+/*
+Remove list styles (bullets/numbers)
+in case you use it with normalize.css
+*/
+ol, ul {
+    list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+    max-width: 100%;
+}
+
+/* Removes spacing between cells in tables */
+table {
+    border-collapse: collapse;
+}
+
+/* Revert the 'white-space' property for textarea elements on Safari */
+textarea {
+    white-space: revert;
+}
+
+
+.title_text {
+    font-size: 4em;
+    font-weight: bold;
+    margin-top: 5vh;
+}
+
+.table_outer_div {
+    margin-top: 3vh;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+table {
+    font-size: 1.5em;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+thead {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+
+th, td {
+    padding: 0.25rem;
+    text-align: left;
+    border-bottom: 2px solid black;
+}
+
+tbody tr:nth-child(even) {
+    background-color: lightseagreen;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.input-text {
+    border: 1px solid black;
+    margin-top: 2vh;
+    padding-left: 2vw;
+    border-radius: 25px;
+    min-height: 2.5em;
+    font-size: 2em;
+    color: teal;
+}
+
+.submit-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    background-color: lightpink;
+}
+
+.submit-button:hover {
+    cursor: pointer;
+}
+
+.btn_outer_div {
+    width: 80%;
+    margin-top: 6vh;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.user-button {
+    width: 20%;
+    height: 2.5em;
+    font-size: 2em;
+    align-items: center;
+    border-radius: 25px;
+    background-color: lightseagreen;
+}
