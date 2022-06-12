@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ninjas</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    
+</head>
+<body>
+<div class="title_text">
+    All Users
+</div>
+
+<div class="table_outer_div">
+    <table>
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+
+        <tbody>
+           {% for user in users %}
+
+               <tr>
+                    <td>{{ user.first_name }}</td>
+                    <td>{{ user.last_name }}</td>
+                    <td>{{ user.age }}</td>
+               </tr>
+
+           {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<div class="btn_outer_div">
+    <a href="/" class="submit-button ">
+       Home
+    </a>
+</div>
+</body>
+</html>

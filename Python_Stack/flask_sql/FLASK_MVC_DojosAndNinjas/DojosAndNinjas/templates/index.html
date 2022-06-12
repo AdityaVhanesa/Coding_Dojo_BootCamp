@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ninjas and Dojos</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+<div class="top-row">
+    <div class="top-row-title">New Dojo</div>
+    <div class="top-row-title">All Dojos</div>
+</div>
+
+<div class="bottom-outer-box">
+    <div class="left-inner-box">
+        <form action="/dojo/create" method="POST">
+
+            <label for="dojo_name" class="heading-2">Name</label>
+            <input type="text" name="dojo_name" id="dojo_name" class="heading-2 text-input">
+            <div>
+                <input type="submit" value="Create Dojo" class="btn heading-2">
+            </div>
+
+        </form>
+    </div>
+    <div class="right-inner-box">
+        <div class="dojo-list-outerbox">
+            {% for dojo in dojos %}
+                <div class="dojo-name">
+                    <a href="/dojo/{{ dojo.name }}">{{ dojo.name }}</a>
+                </div>
+            {% endfor %}
+
+        </div>
+        <a href="/ninja" class="btn-2 heading-2">Add Ninja</a>
+    </div>
+</div>
+</body>
+</html>
