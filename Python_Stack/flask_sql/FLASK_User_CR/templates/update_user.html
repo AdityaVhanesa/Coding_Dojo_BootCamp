@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Friend</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+
+</head>
+<body>
+<div class="title_text"> Add User </div>
+<div class="form-outer-box">
+<form action="/users/{{ user.id }}/update" method="POST">
+    <label>
+        <input type="text" name="first_name" placeholder="{{ user.first_name }}" class="input-text">
+    </label>
+    <label>
+        <input type="text" name="last_name" placeholder="{{ user.last_name }}" class="input-text">
+    </label>
+    <label>
+        <input type="text" name="email" placeholder="{{ user.email }}" class="input-text">
+    </label>
+    <input type="submit" name="process" value="Update" class="submit-button input-text">
+</form>
+
+</div>
+
+</body>
+</html>
