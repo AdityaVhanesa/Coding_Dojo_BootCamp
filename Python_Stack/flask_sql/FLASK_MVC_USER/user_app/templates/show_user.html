@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Detail</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+
+</head>
+<body>
+
+<div class="info-outer-box">
+    <div class="user-info-text"> Full Name         :  {{ user.first_name }}  {{ user.last_name }} </div>
+    <div class="user-info-text"> Email             :  {{ user.email }} </div>
+    <div class="user-info-text"> Created On        :  {{ user.created_at }}</div>
+    <div class="user-info-text"> Last Updated On   :  {{ user.updated_at }}</div>
+</div>
+
+<div class="bottom-div">
+    <a href="/" class="user-info-link">Home |</a>
+    <a href="/users/{{ user.id }}/edit" class="user-info-link"> Edit |</a>
+    <a href="/users/{{ user.id }}/delete" class="user-info-link">Delete</a>
+</div >
+
+
+</body>
+</html>
