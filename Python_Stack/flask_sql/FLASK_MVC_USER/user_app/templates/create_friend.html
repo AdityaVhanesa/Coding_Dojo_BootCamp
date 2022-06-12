@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Friend</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    
+</head>
+<body>
+<div class="title_text"> Add User </div>
+<div class="form-outer-box">
+<form action="/create_user" method="POST">
+    <label>
+        <input type="text" name="first_name" placeholder="First Name" class="input-text">
+    </label>
+    <label>
+        <input type="text" name="last_name" placeholder="Last Name" class="input-text">
+    </label>
+    <label>
+        <input type="text" name="email" placeholder="Email" class="input-text">
+    </label>
+    <input type="submit" name="process" value="Add Friend" class="submit-button input-text">
+</form>
+
+</div>
+
+</body>
+</html>
