@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dash Board</title>
+  <link rel="stylesheet" href="../static/css/style-2.css">
+</head>
+<body>
+<div class="top-toolbar">
+    <div class="c-1 test-border teal-font h1">Welcome {{ user.first_name }}</div>
+    <div class="c-1 test-border toolbar-link h3">
+        <a href="/recipes/create" class="m-2">Create</a>
+        <a href="" class="m-2">Log Out</a>
+    </div>
+</div>
+
+    <div class="h3 header">Your Recipes</div>
+    <div class="flex-box info-box">
+        <div class="c-3 test-border">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="w-4">Name</th>
+                        <th class="w-2">Under 30 min?</th>
+                        <th class="w-4">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for recipe in recipes %}
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                {% endfor %}
+
+                </tbody>
+            </table>
+        </div>
+        <div class="c-1"></div>
+    </div>
+
+</body>
+</html>

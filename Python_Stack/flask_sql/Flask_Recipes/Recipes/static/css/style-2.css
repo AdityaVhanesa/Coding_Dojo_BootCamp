@@ -1,0 +1,213 @@
+/*** The new CSS Reset - version 1.2.0 (last updated 23.7.2021) ***/
+/* Remove all the styles of the 'User-Agent-Stylesheet', except for the 'display' property */
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+    all: unset;
+    display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    /* text-rendering: optiAmizeSpeed;
+    line-height: 1.5; */
+}
+
+/*
+Remove list styles (bullets/numbers)
+in case you use it with normalize.css
+*/
+ol, ul {
+    list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+    max-width: 100%;
+}
+
+/* Removes spacing between cells in tables */
+table {
+    border-collapse: collapse;
+}
+
+/* Revert the 'white-space' property for textarea elements on Safari */
+textarea {
+    white-space: revert;
+}
+
+.top-toolbar {
+    display: flex;
+    width: 80vw;
+    margin-top: 2vh;
+}
+
+.c-1 {
+    flex-grow: 1;
+}
+
+.h1 {
+    font-size: 3em;
+}
+
+.teal-font {
+    color: teal;
+}
+
+.test-border {
+}
+
+a:hover {
+    color: teal;
+    cursor: pointer;
+}
+
+.toolbar-link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 2vw;
+}
+
+.m-2 {
+    margin-left: 2vw;
+}
+
+.h3 {
+    font-size: 1.5em;
+}
+
+.c-3 {
+    flex-grow: 3;
+}
+
+.flex-box {
+    display: flex;
+}
+
+.header {
+    width: 80vw;
+    margin-top: 4vh;
+}
+
+.info-box {
+    width: 80vw;
+    margin-top: 2vh;
+}
+
+
+table {
+    border-collapse: collapse;
+}
+
+thead {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+
+th, td {
+    padding: 0.2rem;
+    text-align: left;
+    border-bottom: 2px solid black;
+}
+
+tbody {
+    font-size: 1em;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: lightseagreen;
+}
+
+.h4 {
+    font-size: 1em;
+}
+
+.w-4 {
+    width: 40%;
+}
+
+.w-2 {
+    width: 20%;
+}
+
+.outerBox {
+    display: flex;
+    border: 2px solid red;
+    width: 80%;
+    margin-top: 5vh;
+}
+
+.input-field {
+    border: 2px solid black;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    border-radius: 25px;
+    padding-left: 2vw;
+}
+
+.form-left{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+}
+
+.text-input {
+    width: 40vw;
+    height: 15vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
