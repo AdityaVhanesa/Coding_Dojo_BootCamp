@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Great Number Game</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <style>
+        .player_guess_input_bg {
+            background-color: {{ request.session.bg }};
+        }
+    </style>
+</head>
+<body>
+
+<div class="game_heading">
+    Guess Number between 0 to 100
+</div>
+
+
+
+<form action="process_number" method="post">{% csrf_token %}
+    <div>
+        <label>
+            <input type="text" name="user_number" placeholder="" class="player_guess_input_text player_guess_input_bg">
+        </label>
+    </div>
+</form>
+
+<a href="process_number"><div class="play_button">{{ request.session.bt }}</div></a>
+</body>
+</html>

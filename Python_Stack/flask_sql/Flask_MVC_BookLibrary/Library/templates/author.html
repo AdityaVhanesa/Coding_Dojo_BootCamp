@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Authors</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+
+</head>
+<body>
+<div class="flex-box">
+    <div class="flex-innerbox">
+        <form action="/author_create" method="post">
+            <div class="h1">New Author</div>
+            <div class="form-input">
+                <label for="author_name" class="h3">Name</label>
+                <input class="input-box" type="text" name="author_name" id="author_name">
+            </div>
+            <div class="btn">
+                <input type="submit" value="Create">
+            </div>
+        </form>
+    </div>
+    <div  class="flex-innerbox">
+        <div class="h1">All Authors</div>
+        <div class="display-box">
+            {% for author in authors %}
+                <a href="/authors/{{ author.id }}" class="data-row h3"> {{ author.name }} </a>
+            {% endfor %}
+
+        </div>
+        <div class="m-5 h3"><a href="/books" class="link">Add Book</a></div>
+    </div>
+</div>
+</body>
+</html>

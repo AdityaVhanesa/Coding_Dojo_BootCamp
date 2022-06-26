@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+<div class="outerBox">
+    <div class="inner-box">
+        <div class="h1">Register</div>
+        <div class="flash">
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+            </ul>
+            {% endif %}
+            {% endwith %}
+        </div>
+        <div>
+            <form action="/register" class="h3" method="post">
+                <label for="first_name">First Name:</label>
+                <input type="text" name="first_name" id="first_name" class="input-field">
+                <label for="last_name">Last Name:</label>
+                <input type="text" name="last_name" id="last_name" class="input-field">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" class="input-field">
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" class="input-field">
+                <label for="c_passowrd">Confirm Password:</label>
+                <input type="password" name="c_password" id="c_passowrd" class="input-field">
+                <input type="hidden" name="register">
+                <input type="submit" value="Register" class="btn">
+            </form>
+        </div>
+    </div>
+    <div class="inner-box">
+        <div class="h1">Log in</div>
+        <div>
+            <form action="/login" class="h3" method="post">
+                <label for="login_email">Email:</label>
+                <input type="email" name="email" id="login_email" class="input-field">
+                <label for="login_password">Password:</label>
+                <input type="password" name="password" id="login_password" class="input-field">
+                <input type="hidden" name="login">
+                <input type="submit" value="Login" class="btn">
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

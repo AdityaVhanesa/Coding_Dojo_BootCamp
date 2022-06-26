@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Ninja</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+<div class="heading-1"> Add Ninja </div>
+<div class="form-outer-box">
+<form action="/ninja/create" method="POST" class="add-form">
+    <label>
+        <select name="dojo" id="dojo" class="input-text">
+            {% for dojo in dojos %}
+                <option value="{{ dojo.name }}">{{ dojo.name }}</option>
+            {% endfor %}
+
+        </select>
+    </label>
+    <label>
+        <input type="text" name="first_name" placeholder="First Name" class="input-text">
+    </label>
+    <label>
+        <input type="text" name="last_name" placeholder="Last Name" class="input-text">
+    </label>
+    <label>
+        <input type="text" name="age" placeholder="Age" class="input-text">
+    </label>
+    <input type="submit" name="process" value="Add Ninja" class="submit-button input-text">
+</form>
+
+</div>
+</body>
+</html>

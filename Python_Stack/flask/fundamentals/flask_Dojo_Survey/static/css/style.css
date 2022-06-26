@@ -1,0 +1,120 @@
+/*** The new CSS Reset - version 1.2.0 (last updated 23.7.2021) ***/
+/* Remove all the styles of the 'User-Agent-Stylesheet', except for the 'display' property */
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+    all: unset;
+    display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: bisque;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/*
+Remove list styles (bullets/numbers)
+in case you use it with normalize.css
+*/
+ol, ul {
+    list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+    max-width: 100%;
+}
+
+/* Removes spacing between cells in tables */
+table {
+    border-collapse: collapse;
+}
+
+/* Revert the 'white-space' property for textarea elements on Safari */
+textarea {
+    white-space: revert;
+}
+
+.survey_outer_div {
+    background-color: lightsteelblue;
+    min-width: 30vw;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    border-radius: 25px;
+    border: 5px solid black;
+    box-shadow: 7px 7px 7px 2px gray;
+}
+
+.s_input {
+    text-align: center;
+    background-color: lightgrey;
+    min-width: 100%;
+    border-radius: 25px;
+    border: 3px solid gray;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.submit_button {
+    min-height: 2vh;
+    min-width: 15vw;
+    margin-top: 10px;
+    border-radius: 25px;
+
+    background-color: #fca311;
+    font-weight: bold;
+    font-size: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.submit_button:hover {
+    cursor: pointer;
+}
+
+.info_row_outer_div {
+    min-width: 80%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.info_row_inner_div {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.result_outer_div {
+    justify-content: flex-start;
+}
+
+.result_text {
+    margin-top: 5vh;
+    font-size: 3em;
+    min-width: 80%;
+    text-align: center;
+}
+
+.bold_text {
+    font-weight: bold;
+}
+
+.commnet {
+    min-height: 30%;
+}

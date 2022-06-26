@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Box Play Ground</title>
+    <style>
+        body {
+            background-color: linen;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .outerDiv {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .innerDiv {
+            border: 2px solid black;
+            width: 20vh;
+            height: 20vh;
+            margin: 5px;
+            background-color: {{ box_color }};
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+
+<h1>Welcome</h1>
+
+<div class="outerDiv">
+
+    {% for _ in range(box_count) %}
+        <div class="innerDiv"></div>
+    {% endfor %}
+
+</div>
+
+<body>
+
+</body>
+</html>

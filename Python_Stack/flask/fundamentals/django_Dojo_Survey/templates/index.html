@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dojo_Survey Form</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<div class="survey_outer_div">
+
+    <form action={% url 'process' %} method="post">{% csrf_token %}
+        <div>
+            <label>
+                <input type="text" name="s_name" placeholder="Your Name" class="s_input">
+            </label>
+        </div>
+
+        <div>
+            <label>
+                <select name="s_dojo_location" class="s_input">
+                    <option value="place_holder">Dojo Location</option>
+                    <option value="San Jose">San Jose</option>
+                    <option value="Chicago">Chicago</option>
+                    <option value="New York">New York</option>
+                    <option value="Seattle">Seattle</option>
+                </select>
+            </label>
+        </div>
+
+        <div>
+            <label>
+                <select name="s_fav_language" class="s_input">
+                    <option value="place_holder">Favorite Language</option>
+                    <option value="python">Python</option>
+                    <option value="java">Java</option>
+                    <option value="c">C</option>
+                    <option value="html">HTML</option>
+                    <option value="js">Java Script</option>
+                    <option value="ruby">Ruby</option>
+                </select>
+            </label>
+        </div>
+
+        <div>
+            <label>
+                <textarea name="s_comment"  cols="30" rows="10" placeholder="Comment [ Optional ]" class="s_input"></textarea>
+            </label>
+        </div>
+
+        <div>
+            <label>
+                <input type="submit" value="SUBMIT" class="submit_button">
+            </label>
+        </div>
+
+    </form>
+
+
+
+
+</div>
+</body>
+</html>

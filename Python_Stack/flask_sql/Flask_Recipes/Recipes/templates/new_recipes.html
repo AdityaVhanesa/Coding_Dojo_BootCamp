@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Recipes</title>
+    <link rel="stylesheet" href="../static/css/style-2.css">
+</head>
+<body>
+<div class="top-toolbar">
+    <div class="c-1 test-border teal-font h1">Add new Recipe</div>
+    <div class="c-1 test-border toolbar-link h3">
+        <a href="" class="m-2">Dashboard</a>
+        <a href="" class="m-2">Log Out</a>
+    </div>
+</div>
+
+
+
+<div class="outerBox">
+    <div class="inner-box">
+        <div class="flash">
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+            </ul>
+            {% endif %}
+            {% endwith %}
+        </div>
+        <div class="flex-box">
+            <form action="/register" class="h3" method="post">
+                <div class="form-left">
+                   <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" class="input-field">
+                    <label for="description">Description</label>
+                    <input type="text" name="description" id="description" class="input-field text-input">
+                    <label for="instructions">Instructions</label>
+                    <input type="text" name="instructions" id="instructions" class="input-field text-input">
+                    <input type="submit" value="Register" class="btn">
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

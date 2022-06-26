@@ -1,0 +1,147 @@
+/*** The new CSS Reset - version 1.2.0 (last updated 23.7.2021) ***/
+/* Remove all the styles of the 'User-Agent-Stylesheet', except for the 'display' property */
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+    all: unset;
+    display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    /* text-rendering: optimizeSpeed;
+    line-height: 1.5; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*
+Remove list styles (bullets/numbers)
+in case you use it with normalize.css
+*/
+ol, ul {
+    list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+    max-width: 100%;
+}
+
+/* Removes spacing between cells in tables */
+table {
+    border-collapse: collapse;
+}
+
+/* Revert the 'white-space' property for textarea elements on Safari */
+textarea {
+    white-space: revert;
+}
+
+.flex-box {
+    display: flex;
+    width: 80vw;
+}
+
+
+.h1 {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+
+.h2 {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.h3 {
+    font-size: 1.5em;
+    font-weight: normal;
+}
+
+.flex-innerbox {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.input-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 25px;
+    padding-left: 2vw;
+    margin-left: 5vw;
+
+}
+
+.form-input {
+    display: flex;
+    min-width: inherit;
+    margin-top: 10vh;
+}
+
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    border: 2px solid black;
+    border-radius: 25px;
+    background-color: lightseagreen;
+    margin-top: 5vh;
+    width: 50%;
+    margin-left: 10vw;
+}
+
+.display-box {
+    border: 2px solid black;
+    width: 80%;
+    margin-top: 10vh;
+    height: 25vh;
+    border-radius: 25px;
+    overflow: scroll;
+}
+
+.m-2{
+    margin-top: 2vh;
+}
+
+.m-5 {
+    margin-top: 5vh;
+}
+
+.link:hover {
+    cursor: pointer;
+    color: lightseagreen;
+}
+
+
+.data-row {
+    padding-left: 2vw;
+    border-bottom: 2px solid black;
+    padding-bottom: 0.5vw;
+    padding-top: 0.5vw;
+    display: flex;
+}
+
+.data-row:nth-child(odd) {
+    background-color: lightseagreen;
+}
+
+.data-row:hover{
+    cursor: pointer;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Sighting</title>
+    <link rel="stylesheet" href="../../static/css/style.css">
+</head>
+<body>
+<div>
+    <div class="flex_box  top-title-bar">
+        <div class=" c-2 h1">Sasquatch Websighting</div>
+        <div class=" c-1 h2 flex_box align-flex-end justify-flex-end">Aditya Vhanesa</div>
+    </div>
+
+    <div class=" margin-top-2 flex_box justify-flex-end">
+        <a href="/dashboard" class="width-2 h3">
+            <div class="btn flex_box justify-center">Dashboard</div>
+        </a>
+    </div>
+
+    <div class=" margin-top-2 flex_box justify-flex-end">
+        <a href="/logout" class="width-1 h3">
+            <div class="btn flex_box justify-center">Logout</div>
+        </a>
+    </div>
+
+    <div>
+        {{ sighting.created_at.toggleFormate() }}
+        <div class="margin-top-2 h2">{{ sighting.location }} on {{ sighting.created_at }}</div>
+        {{ sighting.created_at.toggleFormate() }}
+        <div class="margin-top-2 spacer"></div>
+        <div class="margin-top-2 flex_box gap-10">
+            <div class="c-1  flex_box flex-direction-column">
+                <div class="h2">What Happened:</div>
+                <div class="margin-top-2 description-box ">{{ sighting.description }}</div>
+                <div class="h2 margin-top-2 flex_box">
+                    <div>Number of Sasquatches:</div>
+                    <div class="font-weight-normal padding-left">{{ sighting.number }}</div>
+                </div>
+                <div class="flex_box h2 margin-top-2">
+                    <div>Reported By:</div>
+                    <div class="font-weight-normal padding-left">{{ sighting.user }}</div>
+                </div>
+            </div>
+            <div class="c-1  flex-direction-column flex_box">
+                <div class="h2">Skeptics:</div>
+                <div class="margin-top-2 skeptics-box flex_box flex-direction-column">
+                    {% for skeptic in sighting.fetchSkepticsObject() %}
+                        {% if skeptic.isSkeptical %}
+                            <div>{{ skeptic.user }}</div>
+                            <div class="spacer margin-top-2"></div>
+                        {% endif %}
+
+                    {% endfor %}
+
+                </div>
+                {% if currentUserSkeptic %}
+                    {% if currentUserSkeptic.isSkeptical %}
+                        <a href="/edit/believer/{{ session.get("user_id") }}/{{ sighting.id }}" class="h3 margin-top-5">
+                            <div class="btn width-3 flex_box justify-center">Believe it</div>
+                        </a>
+                    {% else %}
+                        <a href="/edit/skeptical/{{ session.get("user_id") }}/{{ sighting.id }}"
+                           class="h3 margin-top-5">
+                            <div class="btn width-3 flex_box justify-center">Skeptical</div>
+                        </a>
+                    {% endif %}
+                {% else %}
+                    <a href="/add/believer/{{ session.get("user_id") }}/{{ sighting.id }}" class="h3 margin-top-5">
+                        <div class="btn width-3 flex_box justify-center">Believe it</div>
+                    </a>
+                    <a href="/add/skeptical/{{ session.get("user_id") }}/{{ sighting.id }}" class="h3 margin-top-2">
+                        <div class="btn width-3 flex_box justify-center">Skeptical</div>
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
