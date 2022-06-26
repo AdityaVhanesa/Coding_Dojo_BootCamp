@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New Sighting</title>
+    <link rel="stylesheet" href="../../static/css/style.css">
+</head>
+<body>
+<div>
+    <div class="flex_box  top-title-bar">
+        <div class=" c-2 h1">Sasquatch Websighting</div>
+        <div class=" c-1 h2 flex_box align-flex-end justify-flex-end">Aditya Vhanesa</div>
+    </div>
+
+    <div class=" margin-top-2 flex_box justify-flex-end">
+        <a href="/dashboard" class="width-2 h3">
+            <div class="btn flex_box justify-center">Dashboard</div>
+        </a>
+    </div>
+
+    <div class=" margin-top-2 flex_box justify-flex-end">
+        <a href="/logout" class="width-1 h3">
+            <div class="btn flex_box justify-center">Logout</div>
+        </a>
+    </div>
+
+    <div>
+        <div class="margin-top-2 h2">Report a Sighting</div>
+        <div class="margin-top-2 spacer"></div>
+        <form action="/new/sighting/create" method="post">
+            <div class="margin-top-2 flex_box gap-5">
+                <div class="c-1  flex_box flex-direction-column">
+                    <label for="location">Location:</label>
+
+                    <div class="flex_box flex-direction-row">
+                        <input type="text" name="location" id="location">
+                        <div class="flash-box flex_box justify-center flex-direction-column">
+                            {% with errors = get_flashed_messages(category_filter=["location_error"]) %}
+                                {% if errors %}
+                                    <ul>
+                                        {%- for msg in errors %}
+                                            <li>{{ msg }}</li>
+                                        {% endfor -%}
+                                    </ul>
+                                {% endif %}
+                            {% endwith %}
+                        </div>
+                    </div>
+
+                    <label for="description">What Happened:</label>
+
+
+                    <div class="flex_box flex-direction-row">
+                        <textarea name="description" id="description"></textarea>
+                        <div class="flash-box flex_box justify-center flex-direction-column">
+                            {% with errors = get_flashed_messages(category_filter=["description_error"]) %}
+                                {% if errors %}
+                                    <ul>
+                                        {%- for msg in errors %}
+                                            <li>{{ msg }}</li>
+                                        {% endfor -%}
+                                    </ul>
+                                {% endif %}
+                            {% endwith %}
+                        </div>
+                    </div>
+
+
+                    <input type="submit" value="Report" class="btn margin-top-5 width-2 flex_box justify-center">
+
+                </div>
+                <div class="c-1  flex-direction-column flex_box">
+                    <label for="date">Date of sighting:</label>
+
+                    <div class="flex_box flex-direction-row">
+                        <input type="date" name="date" id="date" class="flex_box align-center">
+                        <div class="flash-box flex_box justify-center flex-direction-column">
+                            {% with errors = get_flashed_messages(category_filter=["date_error"]) %}
+                                {% if errors %}
+                                    <ul>
+                                        {%- for msg in errors %}
+                                            <li>{{ msg }}</li>
+                                        {% endfor -%}
+                                    </ul>
+                                {% endif %}
+                            {% endwith %}
+                        </div>
+                    </div>
+
+                    <label for="number_of_sasquatch">Number of sasquatches:</label>
+
+                    <div class="flex_box flex-direction-row">
+                        <input type="number" name="number_of_sasquatch" id="number_of_sasquatch">
+                        <div class="flash-box flex_box justify-center flex-direction-column">
+                            {% with errors = get_flashed_messages(category_filter=["number_error"]) %}
+                                {% if errors %}
+                                    <ul>
+                                        {%- for msg in errors %}
+                                            <li>{{ msg }}</li>
+                                        {% endfor -%}
+                                    </ul>
+                                {% endif %}
+                            {% endwith %}
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
